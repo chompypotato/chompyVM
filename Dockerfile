@@ -38,5 +38,6 @@ RUN \
     /tmp/*
   
 # ports and volumes
-EXPOSE 3000
+#lol port 6969 he he
+EXPOSE 6969 
 VOLUME /config
