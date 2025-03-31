@@ -28,7 +28,7 @@ InstallHead="""
 # chompyVM Installer
 """     
 
-LINES = ["KDE Plasma (Heavy)", "XFCE4 (Lightweight)", "I3 (Very Lightweight)", "GNOME 42 (Very Heavy)", "Cinnamon", "LXQT"]
+LINES = ["KDE Plasma (Heavy)", "XFCE4 (Lightweight)", "I3 (Very Lightweight)", "GNOME 42 (Very Heavy, recommended)", "Cinnamon", "LXQT"]
 
 class InstallScreen(Screen):
     CSS_PATH = "installer.tcss"
@@ -38,7 +38,7 @@ class InstallScreen(Screen):
         yield Markdown(InstallHead)
         yield Horizontal (
         Vertical (
-         Label("Default Apps (its recommended you should keep them)"),
+         Label("Default Apps (recommended)"),
          SelectionList[int]( 
             ("Wine", 0, True),
             ("Chrome", 1, True),
@@ -57,7 +57,7 @@ class InstallScreen(Screen):
             id="programming"
         ),),
         Vertical (
-         Label("Apps"),
+         Label("Other"),
          SelectionList[int]( 
             ("VLC", 0),
             ("LibreOffice", 1),
